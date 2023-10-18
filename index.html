@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+  <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="./js/main.js" defer type="module"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <meta name="description" content="Temporizador estilo pomodoro">
+  <title>Focus Timer - v2</title>
+</head>
+<body>
+  <div id="app">
+    <button id="toggle-mode">
+      <span class="sr-only">Light mode ativado!</span>
+      <i class="ph ph-sun"></i>
+      <i class="ph ph-moon"></i>
+    </button>
+
+    <section id="timer" class="flex">
+      <span id="minutes">00</span>
+      <span>:</span>
+      <span id="seconds">00</span>
+    </section>
+
+    <section id="controls" class="flex">
+      <button 
+      data-action="toggleRunning"
+      class="ph ph-play-circle">
+        <span class="sr-only">Iniciar Contador</span>
+      </button>
+      <button 
+      data-action="toggleRunning" 
+      class="ph ph-pause-circle">
+        <span class="sr-only">Pausar Contador</span> 
+      </button> 
+      <button 
+      data-action="reset"
+      class="ph ph-stop-circle">
+        <span class="sr-only">Parar o contador</span>
+      </button>
+      <button 
+      data-action="plusFive"
+      class="ph ph-plus-circle">
+        <span class="sr-only">Adicionar 5 minutos</span>
+      </button>
+      <button 
+      data-action="minusFive"
+      class="ph ph-minus-circle">
+        <span class="sr-only">Diminuir 5 minutos</span>
+      </button>
+    </section>
+
+    
+  </div>
+ 
+  <div id="icons" class="flex">
+    
+      <button 
+      data-sounds="tree"
+      class="ph ph-tree"></button>
+      <button
+      data-sounds="rain" 
+      class="ph ph-cloud-rain"></button>
+    
+    
+      <button 
+      data-sounds="store" 
+      class="ph ph-storefront"></button>
+      <button
+      data-sounds="fire" 
+      class="ph ph-flame"></button>
+    
+  </div>
+
+</body>
+</html>
